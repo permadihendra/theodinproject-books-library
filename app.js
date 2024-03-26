@@ -2,22 +2,36 @@
 const Library = [];
 
 // Book Object Constructor
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-  this.info = function () {
+// function Book(title, author, pages, read) {
+//   this.title = title;
+//   this.author = author;
+//   this.pages = pages;
+//   this.read = read;
+//   this.info = function () {
+//     return `${this.title} by ${this.author}, ${this.pages} pages, ${
+//       this.read == "true" ? "has read" : "not yet read"
+//     }`;
+//   };
+// }
+
+// Book Class
+
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+
+  info() {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${
       this.read == "true" ? "has read" : "not yet read"
     }`;
-  };
+  }
 }
 
 //Prototype toggleReads
-Book.prototype.isRead = function () {
-  console.log("Testing");
-};
 
 // Target <ol> in html page
 
